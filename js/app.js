@@ -1,6 +1,11 @@
 'use strict';
 
 //Begining of Minigame
+var username = prompt('What is your name?');
+var usernameMessage = 'Hey there ' + username + ' welcome to my site! I am going to be asking you a series of Yes or No questions. Have fun!';
+alert(usernameMessage);
+
+
 var favoriteColor = prompt('Is my favorite color black?');
 favoriteColor = favoriteColor.toLowerCase(); //Accepts User input regardless of case
 
