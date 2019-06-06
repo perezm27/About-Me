@@ -8,12 +8,12 @@ var username = prompt('What is your name?');
 var usernameMessage = 'Hey there ' + username + ' welcome to my site! I am going to be asking you a series of Yes or No questions. Have fun!';
 alert(usernameMessage);
 
+//Question 1
 var question1 = function (){
 
-  //Question 1
   var favoriteColor = prompt('Is my favorite color black?');
   favoriteColor = favoriteColor.toLowerCase(); //Accepts User input regardless of case
-  
+
   if(favoriteColor === 'yes' || favoriteColor === 'y'){
     alert('Awesome! How did you know?');
     counter++;
@@ -25,6 +25,7 @@ var question1 = function (){
   console.log('FavoriteColor: ' + favoriteColor);
 };
 question1 ();
+
 
 //Question2
 var question2 = function (){
@@ -43,9 +44,10 @@ var question2 = function (){
 };
 question2 ();
 
+
+//Question 3
 var question3 = function (){
 
-  //Question 3
   var jediMaster = prompt('Am I a Jedi Master?');
   jediMaster = jediMaster.toLowerCase();
   if(jediMaster=== 'no' || jediMaster === 'n'){
@@ -60,12 +62,13 @@ var question3 = function (){
 };
 question3 ();
 
+
+//Question 4
 var question4 = function (){
 
-  //Question 4
   var pet = prompt('Do I have any pets?');
   pet = pet.toLowerCase();
-  
+
   if(pet === 'yes' || pet === 'y'){
     alert('Awesome! How did you know?');
     counter++;
@@ -78,12 +81,13 @@ var question4 = function (){
 };
 question4 ();
 
+
+//Question 5
 var question5 = function (){
 
-  //Question 5
   var favoriteCar = prompt('Do I have a dream car?');
   favoriteCar = favoriteCar.toLowerCase();
-  
+
   if(favoriteCar === 'yes' || favoriteCar === 'y'){
     alert('Awesome! How did you know?');
     counter++;
@@ -96,18 +100,19 @@ var question5 = function (){
 };
 question5 ();
 
+
+//Question 6
 var question6 = function (){
 
-  //Question 6
   alert('I am thinking of a number between 1-10, I\'ll give you 4 tries to get it right. Let\'s do it');
-  
+
   var reachedLimit = 1;
-  
+
   // allows user 4 tries to guess secret number
   for (var i = 0; i < 4; i++){
     var guessNum = prompt('What number am I thinking of?');
     reachedLimit++;
-  
+
     if (guessNum <= 6) {
       alert('Sorry that\'s too low');
     } else if (guessNum >= 8){
@@ -129,28 +134,32 @@ question6 ();
 
 
 //Question 7
-var favoriteFood = ['pizza','hamburger','bread'];
+var question7 = function (){
 
-var userAnswer = prompt('One last question. What is my favorite thing to eat? Hint: This one has multiple answers').toLowerCase();
+  var favoriteFood = ['pizza','hamburger','bread'];
 
-var numOfAttepts = 0;
+  var userAnswer = prompt('One last question. What is my favorite thing to eat? Hint: This one has multiple answers').toLowerCase();
 
-// Source:https://stackoverflow.com/questions/183161/whats-the-best-way-to-break-from-nested-loops-in-javascript
+  var numOfAttepts = 0;
 
-loop1:
-while(numOfAttepts < 5){
-  for (var j = 0; j < favoriteFood.length; j++){
-    if (userAnswer === favoriteFood[j]){
-      alert('You got it! here are all my favorite foods: ' + favoriteFood);
-      counter++;
-      break loop1;
+  // Source:https://stackoverflow.com/questions/183161/whats-the-best-way-to-break-from-nested-loops-in-javascript
+
+  loop1:
+  while(numOfAttepts < 5){
+    for (var j = 0; j < favoriteFood.length; j++){
+      if (userAnswer === favoriteFood[j]){
+        alert('You got it! here are all my favorite foods: ' + favoriteFood);
+        counter++;
+        break loop1;
+      }
     }
+    userAnswer = prompt('Sorry this is wrong you have failed us all, Try again: ');
+    numOfAttepts++;
   }
-  userAnswer = prompt('Sorry this is wrong you have failed us all, Try again: ');
-  numOfAttepts++;
-}
-console.log('Favorite food: ' + favoriteFood);
-console.log('User answers: ' + userAnswer);
-console.log('Counter: ' + counter);
+  console.log('Favorite food: ' + favoriteFood);
+  console.log('User answers: ' + userAnswer);
+  console.log('Counter: ' + counter);
 
-alert('Here are the number of questions you got right ' + username +' '+ counter + ' out of 7');
+  alert('Here are the number of questions you got right ' + username +' '+ counter + ' out of 7');
+};
+question7();
