@@ -78,46 +78,54 @@ var question4 = function (){
 };
 question4 ();
 
-//Question 5
-var favoriteCar = prompt('Do I have a dream car?');
-favoriteCar = favoriteCar.toLowerCase();
+var question5 = function (){
 
-if(favoriteCar === 'yes' || favoriteCar === 'y'){
-  alert('Awesome! How did you know?');
-  counter++;
-} else if (favoriteCar === 'no' || favoriteCar === 'n'){
-  alert('Sorry that is not correct :(');
-} else {
-  alert('Sorry, this is a Yes or No question');
-}
-console.log('favoriteCar: ' + favoriteCar);
-
-//Question 6
-alert('I am thinking of a number between 1-10, I\'ll give you 4 tries to get it right. Let\'s do it');
-
-var reachedLimit = 1;
-
-// allows user 4 tries to guess secret number
-for (var i = 0; i < 4; i++){
-  var guessNum = prompt('What number am I thinking of?');
-  reachedLimit++;
-
-  if (guessNum <= 6) {
-    alert('Sorry that\'s too low');
-  } else if (guessNum >= 8){
-    alert('Sorry that is too high');
-  } else if (guessNum === 7 || guessNum === '7'){
-    alert('You got it!');
+  //Question 5
+  var favoriteCar = prompt('Do I have a dream car?');
+  favoriteCar = favoriteCar.toLowerCase();
+  
+  if(favoriteCar === 'yes' || favoriteCar === 'y'){
+    alert('Awesome! How did you know?');
     counter++;
-    break;
+  } else if (favoriteCar === 'no' || favoriteCar === 'n'){
+    alert('Sorry that is not correct :(');
   } else {
-    alert('This is not an acceptable answer');
+    alert('Sorry, this is a Yes or No question');
   }
-  if(reachedLimit > 4){
-    alert('Seems like you ran out of tries :/ ');
+  console.log('favoriteCar: ' + favoriteCar);
+};
+question5 ();
+
+var question6 = function (){
+
+  //Question 6
+  alert('I am thinking of a number between 1-10, I\'ll give you 4 tries to get it right. Let\'s do it');
+  
+  var reachedLimit = 1;
+  
+  // allows user 4 tries to guess secret number
+  for (var i = 0; i < 4; i++){
+    var guessNum = prompt('What number am I thinking of?');
+    reachedLimit++;
+  
+    if (guessNum <= 6) {
+      alert('Sorry that\'s too low');
+    } else if (guessNum >= 8){
+      alert('Sorry that is too high');
+    } else if (guessNum === 7 || guessNum === '7'){
+      alert('You got it!');
+      counter++;
+      break;
+    } else {
+      alert('This is not an acceptable answer');
+    }
+    if(reachedLimit > 4){
+      alert('Seems like you ran out of tries :/ ');
+    }
   }
-}
-console.log('number Guessed: '+ guessNum);
+  console.log('number Guessed: '+ guessNum);
+};
+question6 ();
 
 
 //Question 7
