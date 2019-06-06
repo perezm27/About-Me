@@ -81,9 +81,12 @@ console.log('favoriteCar: ' + favoriteCar);
 //Question 6
 alert('I am thinking of a number between 1-10, I\'ll give you 4 tries to get it right. Let\'s do it');
 
+var reachedLimit = 1;
+
 // allows user 4 tries to guess secret number
 for (var i = 0; i < 4; i++){
   var guessNum = prompt('What number am I thinking of?');
+  reachedLimit++;
 
   if (guessNum <= 6) {
     alert('Sorry that\'s too low');
@@ -93,11 +96,13 @@ for (var i = 0; i < 4; i++){
     alert('You got it!');
     counter++;
     break;
-  } else{
+  } else {
     alert('This is not an acceptable answer');
   }
+  if(reachedLimit > 4){
+    alert('Seems like you ran out of tries :/ ');
+  }
 }
-alert('Seems like you ran out of tries :/ ');
 console.log('number Guessed: '+ guessNum);
 
 
