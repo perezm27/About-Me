@@ -8,61 +8,75 @@ var username = prompt('What is your name?');
 var usernameMessage = 'Hey there ' + username + ' welcome to my site! I am going to be asking you a series of Yes or No questions. Have fun!';
 alert(usernameMessage);
 
-//Question 1
-var favoriteColor = prompt('Is my favorite color black?');
-favoriteColor = favoriteColor.toLowerCase(); //Accepts User input regardless of case
+var question1 = function (){
 
-if(favoriteColor === 'yes' || favoriteColor === 'y'){
-  alert('Awesome! How did you know?');
-  counter++;
-} else if (favoriteColor === 'no' || favoriteColor === 'n'){
-  alert('Sorry that is not correct :(');
-} else {
-  alert('Sorry, this is a Yes or No question');
-}
-console.log('FavoriteColor: ' + favoriteColor);
+  //Question 1
+  var favoriteColor = prompt('Is my favorite color black?');
+  favoriteColor = favoriteColor.toLowerCase(); //Accepts User input regardless of case
+  
+  if(favoriteColor === 'yes' || favoriteColor === 'y'){
+    alert('Awesome! How did you know?');
+    counter++;
+  } else if (favoriteColor === 'no' || favoriteColor === 'n'){
+    alert('Sorry that is not correct :(');
+  } else {
+    alert('Sorry, this is a Yes or No question');
+  }
+  console.log('FavoriteColor: ' + favoriteColor);
+};
+question1 ();
 
-//Question 2
-var moveThings = prompt('Can I move things with my mind?');
-moveThings = moveThings.toLowerCase();
+//Question2
+var question2 = function (){
 
-if(moveThings === 'no' || moveThings === 'n'){
-  alert('Awesome! How did you know?');
-  counter++;
-} else if (moveThings === 'yes' || moveThings === 'y'){
-  alert('Sorry that is not correct :(');
-} else {
-  alert('Sorry, this is a Yes or No question');
-}
-console.log('moveThings: ' + moveThings);
+  var moveThings = prompt('Can I move things with my mind?');
+  moveThings = moveThings.toLowerCase();
+  if(moveThings === 'no' || moveThings === 'n'){
+    alert('Awesome! How did you know?');
+    counter++;
+  } else if (moveThings === 'yes' || moveThings === 'y'){
+    alert('Sorry that is not correct :(');
+  } else {
+    alert('Sorry, this is a Yes or No question');
+  }
+  console.log('moveThings: ' + moveThings);
+};
+question2 ();
 
-//Question 3
-var jediMaster = prompt('Am I a Jedi Master?');
-jediMaster = jediMaster.toLowerCase();
+var question3 = function (){
 
-if(jediMaster=== 'no' || jediMaster === 'n'){
-  alert('You are right >:p, The darkside is strong with this one');
-  counter++;
-} else if (jediMaster === 'yes' || jediMaster === 'y'){
-  alert('Sorry that is not correct; The force is not strong with you');
-} else {
-  alert('Sorry, this is a Yes or No question');
-}
-console.log('jediMaster: ' + jediMaster);
+  //Question 3
+  var jediMaster = prompt('Am I a Jedi Master?');
+  jediMaster = jediMaster.toLowerCase();
+  if(jediMaster=== 'no' || jediMaster === 'n'){
+    alert('You are right >:p, The darkside is strong with this one');
+    counter++;
+  } else if (jediMaster === 'yes' || jediMaster === 'y'){
+    alert('Sorry that is not correct; The force is not strong with you');
+  } else {
+    alert('Sorry, this is a Yes or No question');
+  }
+  console.log('jediMaster: ' + jediMaster);
+};
+question3 ();
 
-//Question 4
-var pet = prompt('Do I have any pets?');
-pet = pet.toLowerCase();
+var question4 = function (){
 
-if(pet === 'yes' || pet === 'y'){
-  alert('Awesome! How did you know?');
-  counter++;
-} else if (pet === 'no' || pet === 'n'){
-  alert('Sorry that is not correct :(');
-} else {
-  alert('Sorry, this is a Yes or No question');
-}
-console.log('pet: ' + pet);
+  //Question 4
+  var pet = prompt('Do I have any pets?');
+  pet = pet.toLowerCase();
+  
+  if(pet === 'yes' || pet === 'y'){
+    alert('Awesome! How did you know?');
+    counter++;
+  } else if (pet === 'no' || pet === 'n'){
+    alert('Sorry that is not correct :(');
+  } else {
+    alert('Sorry, this is a Yes or No question');
+  }
+  console.log('pet: ' + pet);
+};
+question4 ();
 
 //Question 5
 var favoriteCar = prompt('Do I have a dream car?');
