@@ -19,13 +19,18 @@ main{
   color: blueviolet;
 }
 
-footer{
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
   text-align: center;
   color:black;
+  background-color:yellow;
 }
 
-.bottom {
-  padding: 3px;
-  margin-top: 300px;
-  background-color:yellow;
+.besties{
+  border: 2px dashed white;
+  text-align: left;
+  display: inline-block;
 }
