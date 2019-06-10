@@ -10,6 +10,10 @@ h1 {
   border-color: yellow;
 }
 
+h2 {
+  text-align: left;
+}
+
 .outset {
   border-style: outset;
 }
