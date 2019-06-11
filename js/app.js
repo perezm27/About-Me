@@ -2,6 +2,7 @@
 
 //sets counter that will keep track of questions answered correctly
 var counter = 0;
+var correctAns = ['1.yes ','2.no ','3.no ','4.yes ','5.yes ','6.The number I was thinking of was Seven'];
 
 //Begining of Minigame
 var username = prompt('What is your name?');
@@ -153,7 +154,7 @@ var question7 = function (){
         break loop1;
       }
     }
-    userAnswer = prompt('Sorry this is wrong you have failed us all, Try again: ');
+    userAnswer = prompt('Sorry this is wrong you have failed us all, Try again: ').toLowerCase();
     numOfAttepts++;
   }
   console.log('Favorite food: ' + favoriteFood);
@@ -161,5 +162,6 @@ var question7 = function (){
   console.log('Counter: ' + counter);
 
   alert('Here are the number of questions you got right ' + username +' '+ counter + ' out of 7');
+  alert('Here are the correct Ans: '+ correctAns + ' '+ '7. '+ favoriteFood);
 };
 question7();
